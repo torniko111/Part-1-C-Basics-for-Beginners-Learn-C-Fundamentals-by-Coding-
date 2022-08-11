@@ -1,12 +1,24 @@
-﻿Console.WriteLine("please enter a number from 1 to 10");
+﻿Console.WriteLine("enter speedlimit");
 
-int userInput = int.Parse(Console.ReadLine());
+int speedLimit = int.Parse(Console.ReadLine());
 
-if(userInput >0 && userInput < 10)
+Console.WriteLine("enter the car speed");
+
+int carSpeed = int.Parse(Console.ReadLine());
+
+int difference = carSpeed - speedLimit;
+
+int points = 100;
+
+if (difference < 0)
 {
-    Console.WriteLine("the number is valid");
+    Console.WriteLine("ok");
+}
+else if (difference <= 5)
+{
+    Console.WriteLine("cutted points : {0}", difference);
 }
 else
 {
-    Console.WriteLine("the number is not valid");
+    Console.WriteLine("license suspendend");
 }
